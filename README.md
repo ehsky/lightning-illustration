@@ -17,24 +17,25 @@ To use the "Illustration" component, you can add it to your html of your own com
 
 Here's an example of how to use the "Illustration" component:
 
-html code
-
+```html
+<c-illustration
+  size="large"
+  message-heading="No Data Found"
+  message-body="Please try again later."
+  illustration="Dessert"
+></c-illustration>
 ```
-<c-illustration size="large" message-heading="No Data Found" message-body="Please try again later." illustration="Dessert"></c-illustration>
-```
-
-![Illustration Example](./.images/noDataFound.png)
 
 This will render the "No Data Found" illustration with a large size and the message "Please try again later."
+
+![Illustration Example](./.images/noDataFound.png)
 
 ### Example with Lightning Stencil
 
 Example of how to use the "Illustration" component with the [Lightning Stencil](https://github.com/cesarParra) component. \
 See repo for more information on how to use the Lightning Stencil component.
 
-html code
-
-```
+```html
 <template>
   <lightning-card>
     <c-illustration illustration="Open Road"></c-illustration>
