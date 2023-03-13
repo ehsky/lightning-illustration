@@ -25,7 +25,7 @@ import NO_PREVIEW from "./icons/Miscellaneous/noPreview.html";
 import PREVIEW from "./icons/Miscellaneous/preview.html";
 import RESEARCH from "./icons/Miscellaneous/research.html";
 // No Data
-import NO_DATA from "./icons/NoData/dessert.html";
+import DESSERT from "./icons/NoData/dessert.html";
 import OPEN_ROAD from "./icons/NoData/openRoad.html";
 
 export default class Illustration extends LightningElement {
@@ -96,8 +96,8 @@ export default class Illustration extends LightningElement {
       case "RESEARCH":
         return RESEARCH;
       // No Data
-      case "NO_DATA":
-        return NO_DATA;
+      case "DESSERT":
+        return DESSERT;
       case "OPEN_ROAD":
         return OPEN_ROAD;
       default:

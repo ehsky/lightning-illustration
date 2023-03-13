@@ -20,7 +20,7 @@ const ILLUSTRATIONS = [
   "No Preview",
   "Preview",
   "Research",
-  "No Data",
+  "Dessert",
   "Open Road"
 ];
 
