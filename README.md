@@ -27,6 +27,41 @@ html code
 
 This will render the "No Data Found" illustration with a large size and the message "Please try again later."
 
+### Example with Lightning Stencil
+
+Example of how to use the "Illustration" component with the [Lightning Stencil](https://github.com/cesarParra) component. \
+See repo for more information on how to use the Lightning Stencil component.
+
+html code
+
+```
+<template>
+  <lightning-card>
+    <c-illustration illustration="Open Road"></c-illustration>
+    <lightning-layout multiple-rows>
+      <lightning-layout-item size="12" padding="around-small">
+        <c-stencil
+          class="slds-align_absolute-center"
+          weight-variant="dark"
+          width="150"
+          height="20"
+        ></c-stencil>
+      </lightning-layout-item>
+      <lightning-layout-item size="12" padding="bottom-small">
+        <c-stencil
+          class="slds-align_absolute-center"
+          weight-variant="medium"
+          width="450"
+          height="15"
+        ></c-stencil>
+      </lightning-layout-item>
+    </lightning-layout>
+  </lightning-card>
+</template>
+```
+
+![Illustration Example Using Lightning Stencil](./.images/exampleInStencil.png)
+
 ## Built-in Illustrations
 
 The "Illustration" component comes with several built-in Salesforce images that can be used to convey different types of messages. The illustrations are taken from the [Lightning Design System](https://www.lightningdesignsystem.com/components/illustration/#site-main-content). Here's a list of the available built-in images:
