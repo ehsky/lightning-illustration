@@ -1,18 +1,60 @@
-# Salesforce DX Project: Next Steps
+# Lightning Illustration
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+The `illustration` component is a LWC that displays a visual representation to convey a message. It can be used to display a message when there is no data to display, or when there is an error.
 
-## How Do You Plan to Deploy Your Changes?
+The repository was inspired by the [Lightning Stencil](https://github.com/cesarParra/lightning-stencil) repository created by [@cesarParra](https://github.com/cesarParra).
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Usage
 
-## Configure Your Salesforce DX Project
+To use the "Illustration" component, you can add it to your html of your own component. All component attributes are optional. Here are the available attributes that can be used to configure the component:
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+- `size`: the size of the illustration to render. Possible values are `small` or `large`.
+- `message-heading`: the heading of the message to be displayed.
+- `message-body`: the body of the message to be displayed.
+- `illustration`: the name of the illustration to be displayed. This can be a custom image or one of the built-in Salesforce images.
 
-## Read All About It
+### Example
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+Here's an example of how to use the "Illustration" component:
+
+html code
+
+```
+<c-illustration size="large" message-heading="No Data Found" message-body="Please try again later." illustration="Dessert"></c-illustration>
+```
+
+![Illustration Example](./.images/noDataFound.png)
+
+This will render the "No Data Found" illustration with a large size and the message "Please try again later."
+
+## Built-in Illustrations
+
+The "Illustration" component comes with several built-in Salesforce images that can be used to convey different types of messages. The illustrations are taken from the [Lightning Design System](https://www.lightningdesignsystem.com/components/illustration/#site-main-content). Here's a list of the available built-in images:
+
+- Custom
+  - `FISHING_DEALS`
+  - `LAKE_MOUNTAIN`
+  - `NO_EVENTS`
+  - `NO_TASK`
+  - `SETUP`
+- Error
+  - `NO_ACCESS`
+  - `NO_CONNECTION`
+  - `NOT_AVAILABLE_IN_LIGHTNING`
+  - `PAGE_NOT_AVAILABLE`
+  - `WALKTHROUGH_NOT_AVAILABLE`
+- Informational
+  - `GOING_CAMPING`
+  - `MAINTENANCE`
+- Miscellaneous
+  - `GONE_FISHING`
+  - `NO_ACCESS2`
+  - `NO_CONTENT`
+  - `NO_PREVIEW`
+  - `PREVIEW`
+  - `RESEARCH`
+- No Data
+  - `DESSERT`
+  - `OPEN_ROAD`
+
+To use any of these built-in images, set the `illustration` attribute to the name of the image. For example, to use the `No Access` image, set the `illustration` attribute to `"NO_ACCESS"`.
