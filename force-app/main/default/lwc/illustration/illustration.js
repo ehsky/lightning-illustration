@@ -28,6 +28,29 @@ import RESEARCH from "./icons/Miscellaneous/research.html";
 import DESSERT from "./icons/NoData/dessert.html";
 import OPEN_ROAD from "./icons/NoData/openRoad.html";
 
+const illustrationMap = {
+  FISHING_DEALS,
+  LAKE_MOUNTAIN,
+  NO_EVENTS,
+  NO_TASK,
+  SETUP,
+  NO_ACCESS,
+  NO_CONNECTION,
+  NOT_AVAILABLE_IN_LIGHTNING,
+  PAGE_NOT_AVAILABLE,
+  WALKTHROUGH_NOT_AVAILABLE,
+  GOING_CAMPING,
+  MAINTENANCE,
+  GONE_FISHING,
+  NO_ACCESS2,
+  NO_CONTENT,
+  NO_PREVIEW,
+  PREVIEW,
+  RESEARCH,
+  DESSERT,
+  OPEN_ROAD,
+};
+
 export default class Illustration extends LightningElement {
   /**
    * The size of the illustration to render.
@@ -53,55 +76,10 @@ export default class Illustration extends LightningElement {
   }
 
   render() {
-    const illustration = this.illustration.split(" ").join("_").toUpperCase();
-    switch (illustration) {
-      // Custom
-      case "FISHING_DEALS":
-        return FISHING_DEALS;
-      case "LAKE_MOUNTAIN":
-        return LAKE_MOUNTAIN;
-      case "NO_EVENTS":
-        return NO_EVENTS;
-      case "NO_TASK":
-        return NO_TASK;
-      case "SETUP":
-        return SETUP;
-      // Error
-      case "NO_ACCESS":
-        return NO_ACCESS;
-      case "NO_CONNECTION":
-        return NO_CONNECTION;
-      case "NOT_AVAILABLE_IN_LIGHTNING":
-        return NOT_AVAILABLE_IN_LIGHTNING;
-      case "PAGE_NOT_AVAILABLE":
-        return PAGE_NOT_AVAILABLE;
-      case "WALKTHROUGH_NOT_AVAILABLE":
-        return WALKTHROUGH_NOT_AVAILABLE;
-      // Informational
-      case "GOING_CAMPING":
-        return GOING_CAMPING;
-      case "MAINTENANCE":
-        return MAINTENANCE;
-      // Miscellaneous
-      case "GONE_FISHING":
-        return GONE_FISHING;
-      case "NO_ACCESS2":
-        return NO_ACCESS2;
-      case "NO_CONTENT":
-        return NO_CONTENT;
-      case "NO_PREVIEW":
-        return NO_PREVIEW;
-      case "PREVIEW":
-        return PREVIEW;
-      case "RESEARCH":
-        return RESEARCH;
-      // No Data
-      case "DESSERT":
-        return DESSERT;
-      case "OPEN_ROAD":
-        return OPEN_ROAD;
-      default:
-        return FISHING_DEALS;
-    }
+    const illustrationKey = this.illustration
+      .split(" ")
+      .join("_")
+      .toUpperCase();
+    return illustrationMap[illustrationKey] || FISHING_DEALS;
   }
 }
